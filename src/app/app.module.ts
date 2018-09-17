@@ -7,6 +7,9 @@ import { RouterModule,Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -14,6 +17,7 @@ const appRoutes: Routes = [
 
 { path: 'about' , component : AboutComponent },
 { path: 'contacts' , component : ContactsComponent },
+{ path: 'gallery' , component : GalleryComponent },
 { path:'**' ,redirectTo: '/about', patchMatch : 'full' }
 
 
@@ -23,10 +27,11 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     AboutComponent,
-    ContactsComponent
+    ContactsComponent,
+    GalleryComponent
   ],
   imports: [
-    BrowserModule,FormsModule,RouterModule.forRoot(appRoutes)
+    BrowserModule,FormsModule, HttpClientModule,RouterModule.forRoot(appRoutes)
   ],
   providers: [ Aboutservice ],
   bootstrap: [AppComponent]

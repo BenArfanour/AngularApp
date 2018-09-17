@@ -1,0 +1,36 @@
+   <p> </p>
+  <div class="container"> 
+
+	<div class="panel panel-primary">  
+
+		<div class="panel-heading"> 
+   
+
+			Gallery Component
+
+
+
+		</div>
+  			
+  			<div class="panel-body">
+
+
+  		<form #f="ngForm" (ngSubmit)="onSearch(f.value)">
+  			<div class="form-group">
+
+  				<label> Mot Clé : </label>
+  				<input type="text" name="motCle" ngModel required>
+  				<button class="btn btn-primary" [disabled] = "!f.valid" > Chercher </button>
+
+  		    </div>		
+
+  		</form>	
+
+
+  			</div>		
+
+
+	
+	</div>
+
+</div>
