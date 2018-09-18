@@ -18,7 +18,7 @@ const appRoutes: Routes = [
 { path: 'about' , component : AboutComponent },
 { path: 'contacts' , component : ContactsComponent },
 { path: 'gallery' , component : GalleryComponent },
-{ path:'**' ,redirectTo: '/about', patchMatch : 'full' }
+{ path:'**' ,redirectTo: '/about', pathMatch : 'full' }
 
 
 ];
@@ -31,6 +31,7 @@ const appRoutes: Routes = [
     GalleryComponent
   ],
   imports: [
+
     BrowserModule,FormsModule, HttpClientModule,RouterModule.forRoot(appRoutes)
   ],
   providers: [ Aboutservice ],
